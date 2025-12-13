@@ -1,10 +1,80 @@
 <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-16 max-w-2xl mx-auto tracking-tight">
-        Connect the dots between posts<br />
-        and easily reference past decisions
+        How Kawalharta works:<br />
+        From LHKPN to insights
     </h2>
 
-    <div class="relative max-w-4xl mx-auto mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center text-center relative">
+            <div class="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                1
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Data Collection</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Automated scraping and indexing of LHKPN reports from KPK's e-LHKPN portal
+            </p>
+            <div class="mt-4 bg-gray-50 border border-gray-200 rounded-lg p-3 w-full">
+                <div class="text-xs text-gray-500 mb-2">Source:</div>
+                <div class="flex items-center gap-2 text-sm font-medium text-gray-900">
+                    <span>🏛️</span>
+                    <span>KPK e-LHKPN</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="hidden md:flex items-center justify-center">
+            <svg class="w-8 h-8 text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center text-center relative">
+            <div class="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                2
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Data Processing</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Aggregation, normalization, and change detection across multiple reporting periods
+            </p>
+            <div class="mt-4 bg-gray-50 border border-gray-200 rounded-lg p-3 w-full">
+                <div class="text-xs text-gray-500 mb-2">Analysis:</div>
+                <div class="flex items-center gap-2 text-sm font-medium text-gray-900">
+                    <span>📊</span>
+                    <span>Automated</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="hidden md:flex items-center justify-center">
+            <svg class="w-8 h-8 text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex flex-col items-center text-center relative">
+            <div class="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                3
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Visualization</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Easy-to-understand dashboards, charts, and alerts for public monitoring
+            </p>
+            <div class="mt-4 bg-gray-50 border border-gray-200 rounded-lg p-3 w-full">
+                <div class="text-xs text-gray-500 mb-2">Access:</div>
+                <div class="flex items-center gap-2 text-sm font-medium text-gray-900">
+                    <span>🌐</span>
+                    <span>Public Platform</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto mb-16 hidden">
         <!-- Mock UI -->
         <div class="bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden flex">
             <!-- Main Post Area -->
@@ -102,14 +172,16 @@
         </div>
     </div>
 
-    <!-- Testimonial -->
-    <div class="max-w-3xl mx-auto">
-        <blockquote class="text-lg text-gray-500 leading-relaxed">
-            Campsite is like the office for our remote team. It's a delightful space where we jam on ideas and <span class="bg-yellow-100 text-yellow-800 px-1 rounded">keep everyone updated on work-in-progress.</span>
-        </blockquote>
-        <div class="flex items-center gap-3 mt-4">
-            <img src="https://i.pravatar.cc/150?u=ryan" alt="Ryan Olson" class="w-8 h-8 rounded-full bg-gray-200 grayscale" />
-            <div class="text-sm text-gray-500">Ryan Olson, CTO at Retro</div>
+    <!-- Independence Notice -->
+    <div class="max-w-3xl mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-8">
+        <div class="flex items-start gap-4">
+            <div class="text-3xl">ℹ️</div>
+            <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Independent Platform</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Kawalharta is an independent transparency initiative with no affiliations to KPK, government agencies, or political parties. We present LHKPN data exactly as officials report it to maintain neutrality and credibility.
+                </p>
+            </div>
         </div>
     </div>
 </section>

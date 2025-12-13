@@ -1,0 +1,78 @@
+<script lang="ts">
+    // Mock data for Indonesian officials tracking
+    const institutions = [
+        { name: "DPR RI", count: 142, icon: "🏛️" },
+        { name: "Kementerian", count: 234, icon: "🏢" },
+        { name: "Pemerintah Daerah", count: 156, icon: "🏙️" },
+        { name: "Lembaga Negara", count: 89, icon: "⚖️" },
+        { name: "BUMN", count: 69, icon: "🏭" }
+    ];
+
+    const recentChanges = [
+        {
+            name: "Anies Baswedan",
+            position: "Menteri Pendidikan",
+            change: "+Rp 2.4 M",
+            changeType: "increase",
+            date: "2 hari lalu",
+            institution: "Kementerian"
+        },
+        {
+            name: "Prabowo Subianto",
+            position: "Presiden RI",
+            change: "+Rp 15.8 M",
+            changeType: "increase",
+            date: "3 hari lalu",
+            institution: "Lembaga Negara"
+        },
+        {
+            name: "Ganjar Pranowo",
+            position: "Gubernur Jawa Tengah",
+            change: "-Rp 890 Jt",
+            changeType: "decrease",
+            date: "5 hari lalu",
+            institution: "Pemerintah Daerah"
+        },
+        {
+            name: "Ridwan Kamil",
+            position: "Gubernur Jawa Barat",
+            change: "+Rp 3.2 M",
+            changeType: "increase",
+            date: "1 minggu lalu",
+            institution: "Pemerintah Daerah"
+        }
+    ];
+
+    const lastWeekChanges = [
+        {
+            name: "Sandiaga Uno",
+            position: "Menteri Pariwisata",
+            change: "+Rp 5.6 M",
+            changeType: "increase",
+            date: "8 hari lalu",
+            institution: "Kementerian"
+        },
+        {
+            name: "Sri Mulyani",
+            position: "Menteri Keuangan",
+            change: "+Rp 1.2 M",
+            changeType: "increase",
+            date: "10 hari lalu",
+            institution: "Kementerian"
+        },
+        {
+            name: "Erick Thohir",
+            position: "Menteri BUMN",
+            change: "+Rp 4.8 M",
+            changeType: "increase",
+            date: "12 hari lalu",
+            institution: "Kementerian"
+        }
+    ];
+
+    const watchlist = [
+        { name: "Anies Baswedan", position: "Menteri Pendidikan", alerts: true },
+        { name: "Prabowo Subianto", position: "Presiden RI", alerts: true },
+        { name: "Ganjar Pranowo", position: "Gubernur Jawa Tengah", alerts: false },
+        { name: "Ridwan Kamil", position: "Gubernur Jawa Barat", alerts: true }
+    ];

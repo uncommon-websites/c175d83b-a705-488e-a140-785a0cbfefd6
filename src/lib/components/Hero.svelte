@@ -1,5 +1,5 @@
 <script lang="ts">
-    import MockAppInterface from './MockAppInterface.svelte';
+    // Hero component for Kawalharta
 </script>
 
 <section class="flex flex-col items-center pt-10 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -33,7 +33,139 @@
         <div class="absolute -left-20 top-20 w-96 h-96 bg-primary-200/30 rounded-full blur-3xl mix-blend-multiply filter opacity-70 animate-blob pointer-events-none"></div>
         <div class="absolute -right-20 top-40 w-96 h-96 bg-primary-300/20 rounded-full blur-3xl mix-blend-multiply filter opacity-70 animate-blob animation-delay-2000 pointer-events-none"></div>
 
-        <MockAppInterface />
+        <!-- Dashboard Preview -->
+        <div class="rounded-xl border border-gray-200 bg-white shadow-2xl overflow-hidden relative z-10">
+            <div class="flex h-[600px]">
+                <!-- Sidebar -->
+                <div class="w-64 bg-gray-50 border-r border-gray-200 p-4">
+                    <div class="flex items-center gap-2 font-bold text-gray-900 mb-6">
+                        <span class="text-xl">🇮🇩</span>
+                        Kawalharta
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-lg p-3 mb-4">
+                        <div class="text-xs text-gray-500">Total Aset</div>
+                        <div class="text-xl font-bold text-gray-900">Rp 44.7 T</div>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <div class="px-3 py-2 bg-gray-200 rounded-md font-medium text-gray-900">Beranda</div>
+                        <div class="px-3 py-2 text-gray-600">Perubahan Terbaru</div>
+                        <div class="px-3 py-2 text-gray-600 flex items-center justify-between">
+                            <span>Watchlist</span>
+                            <span class="bg-primary-600 text-white text-xs px-2 py-0.5 rounded-full">4</span>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <div class="text-xs text-gray-400 mb-2">Institusi</div>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <div class="flex items-center justify-between px-2">
+                                <span>🏛️ DPR RI</span>
+                                <span class="text-xs">142</span>
+                            </div>
+                            <div class="flex items-center justify-between px-2">
+                                <span>🏢 Kementerian</span>
+                                <span class="text-xs">234</span>
+                            </div>
+                            <div class="flex items-center justify-between px-2">
+                                <span>🏙️ Pemda</span>
+                                <span class="text-xs">156</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="flex-1 p-6 bg-white">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Perubahan Harta Terbaru</h2>
+                    <div class="space-y-3">
+                        <!-- Official 1 -->
+                        <div class="flex items-center gap-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold text-sm text-gray-600">
+                                AB
+                            </div>
+                            <div class="flex-1">
+                                <div class="font-semibold text-gray-900">Anies Baswedan</div>
+                                <div class="text-sm text-gray-600">Menteri Pendidikan</div>
+                                <div class="text-xs text-gray-500 mt-1">🏢 Kementerian • 2 hari lalu</div>
+                            </div>
+                            <div class="text-sm font-bold text-green-600">+Rp 2.4 M</div>
+                        </div>
+
+                        <!-- Official 2 -->
+                        <div class="flex items-center gap-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold text-sm text-gray-600">
+                                PS
+                            </div>
+                            <div class="flex-1">
+                                <div class="font-semibold text-gray-900">Prabowo Subianto</div>
+                                <div class="text-sm text-gray-600">Presiden RI</div>
+                                <div class="text-xs text-gray-500 mt-1">⚖️ Lembaga Negara • 3 hari lalu</div>
+                            </div>
+                            <div class="text-sm font-bold text-green-600">+Rp 15.8 M</div>
+                        </div>
+
+                        <!-- Official 3 -->
+                        <div class="flex items-center gap-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold text-sm text-gray-600">
+                                GP
+                            </div>
+                            <div class="flex-1">
+                                <div class="font-semibold text-gray-900">Ganjar Pranowo</div>
+                                <div class="text-sm text-gray-600">Gubernur Jawa Tengah</div>
+                                <div class="text-xs text-gray-500 mt-1">🏙️ Pemerintah Daerah • 5 hari lalu</div>
+                            </div>
+                            <div class="text-sm font-bold text-red-600">-Rp 890 Jt</div>
+                        </div>
+
+                        <!-- Official 4 -->
+                        <div class="flex items-center gap-4 p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold text-sm text-gray-600">
+                                RK
+                            </div>
+                            <div class="flex-1">
+                                <div class="font-semibold text-gray-900">Ridwan Kamil</div>
+                                <div class="text-sm text-gray-600">Gubernur Jawa Barat</div>
+                                <div class="text-xs text-gray-500 mt-1">🏙️ Pemerintah Daerah • 1 minggu lalu</div>
+                            </div>
+                            <div class="text-sm font-bold text-green-600">+Rp 3.2 M</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar -->
+                <div class="w-64 border-l border-gray-200 bg-gray-50 p-4">
+                    <div class="text-sm font-semibold text-gray-900 mb-4">Watchlist Saya</div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold text-gray-600">AB</div>
+                            <div class="flex-1 min-w-0">
+                                <div class="text-sm font-medium text-gray-900 truncate">Anies Baswedan</div>
+                                <div class="text-xs text-green-600 flex items-center gap-1">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                    Alert aktif
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold text-gray-600">PS</div>
+                            <div class="flex-1 min-w-0">
+                                <div class="text-sm font-medium text-gray-900 truncate">Prabowo Subianto</div>
+                                <div class="text-xs text-green-600 flex items-center gap-1">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                    Alert aktif
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-primary-50 border border-primary-200 rounded-lg p-3">
+                        <div class="text-xs font-semibold text-gray-900 mb-1">🔔 Segera Hadir</div>
+                        <div class="text-xs text-gray-600 mb-3">Dapatkan notifikasi real-time</div>
+                        <button class="w-full bg-primary-600 text-white text-xs font-medium px-3 py-2 rounded-md">
+                            Daftar Waitlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Gradient overlay at bottom to blend if needed, or just shadow -->
         <div class="absolute -inset-x-20 -bottom-20 h-40 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
     </div>

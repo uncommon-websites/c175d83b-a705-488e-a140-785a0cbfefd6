@@ -1,101 +1,80 @@
 <script lang="ts">
-    // Mock data for the interface
-    const favorites = [
-        { name: "Ryan Nystrom", icon: "user" },
-        { name: "Nick Holden", icon: "user" },
-        { name: "Founders", icon: "lock" },
-        { name: "Investor update Q3 ...", icon: "doc" }
+    // Mock data for Indonesian officials tracking
+    const institutions = [
+        { name: "DPR RI", count: 142, icon: "🏛️" },
+        { name: "Kementerian", count: 234, icon: "🏢" },
+        { name: "Pemerintah Daerah", count: 156, icon: "🏙️" },
+        { name: "Lembaga Negara", count: 89, icon: "⚖️" },
+        { name: "BUMN", count: 69, icon: "🏭" }
     ];
 
-    const channels = [
-        { name: "Daily Updates", icon: "hash", color: "bg-orange-100 text-orange-600" },
-        { name: "Investor updates", icon: "hash", color: "bg-yellow-100 text-yellow-600" },
-        { name: "Product", icon: "hash", color: "bg-blue-100 text-blue-600" },
-        { name: "Engineering", icon: "hash", color: "bg-purple-100 text-purple-600" },
-        { name: "Feedback", icon: "hash", color: "bg-pink-100 text-pink-600" },
-        { name: "GTM", icon: "hash", color: "bg-green-100 text-green-600" },
-        { name: "noob", icon: "hash", color: "bg-gray-100 text-gray-600" },
-        { name: "MRR", icon: "hash", color: "bg-indigo-100 text-indigo-600" },
-        { name: "Calls", icon: "video", color: "bg-red-100 text-red-600" },
-        { name: "Photostream", icon: "image", color: "bg-cyan-100 text-cyan-600" }
-    ];
-
-    const posts = [
+    const recentChanges = [
         {
-            title: "Customer feedback: Add support for auto-recording calls",
-            author: "Ryan Nystrom",
-            preview: "This is the fourth time this week, we should do this!",
-            tag: "Plain",
-            tagColor: "text-gray-500",
-            icon: "P",
-            iconBg: "bg-black"
+            name: "Anies Baswedan",
+            position: "Menteri Pendidikan",
+            change: "+Rp 2.4 M",
+            changeType: "increase",
+            date: "2 hari lalu",
+            institution: "Kementerian"
         },
         {
-            title: "Q4 initiatives",
-            author: "Brian Lovin",
-            preview: "Hey everyone, I wanted to share what we'll be tackling through the end of the ye...",
-            tag: "Product",
-            tagColor: "text-blue-500",
-            icon: "📝",
-            iconBg: "bg-gray-100"
+            name: "Prabowo Subianto",
+            position: "Presiden RI",
+            change: "+Rp 15.8 M",
+            changeType: "increase",
+            date: "3 hari lalu",
+            institution: "Lembaga Negara"
         },
         {
-            title: "Daily update - October 4, 2024",
-            author: "Brian Lovin",
-            preview: "Campbot: What did you work on today?",
-            tag: "Daily updates",
-            tagColor: "text-orange-500",
-            icon: "📅",
-            iconBg: "bg-white border"
+            name: "Ganjar Pranowo",
+            position: "Gubernur Jawa Tengah",
+            change: "-Rp 890 Jt",
+            changeType: "decrease",
+            date: "5 hari lalu",
+            institution: "Pemerintah Daerah"
         },
         {
-            title: "Consolidating our Radix component system",
-            author: "Ryan Nystrom",
-            preview: "It's only a matter of time before we fork Radix",
-            tag: "Engineering",
-            tagColor: "text-purple-500",
-            icon: "Rx",
-            iconBg: "bg-white border"
+            name: "Ridwan Kamil",
+            position: "Gubernur Jawa Barat",
+            change: "+Rp 3.2 M",
+            changeType: "increase",
+            date: "1 minggu lalu",
+            institution: "Pemerintah Daerah"
         }
     ];
 
-    const yesterdayPosts = [
+    const lastWeekChanges = [
         {
-            title: "Meta ads experiment progress",
-            author: "Nick Holden",
-            preview: "Here's a quick update on our current ads results with three distinct profiles we're tr...",
-            tag: "Q4 Growth",
-            tagColor: "text-pink-500",
-            icon: "M",
-            iconBg: "bg-blue-600 text-white"
+            name: "Sandiaga Uno",
+            position: "Menteri Pariwisata",
+            change: "+Rp 5.6 M",
+            changeType: "increase",
+            date: "8 hari lalu",
+            institution: "Kementerian"
         },
         {
-            title: "Frontier Forest upgraded to Pro with 8 seats (+$160 MRR)",
-            author: "Dan Philibin",
-            preview: "🙌 woo! Glad we finally got them over the finish line.",
-            tag: "Stripe",
-            tagColor: "text-indigo-500",
-            icon: "S",
-            iconBg: "bg-indigo-600 text-white"
+            name: "Sri Mulyani",
+            position: "Menteri Keuangan",
+            change: "+Rp 1.2 M",
+            changeType: "increase",
+            date: "10 hari lalu",
+            institution: "Kementerian"
         },
         {
-            title: "Supporting reminders on chat threads",
-            author: "Ryan Nystrom",
-            preview: "One of the missing features for Campsite is to support reminders on ch...",
-            tag: "Feedback",
-            tagColor: "text-yellow-500",
-            icon: "🔔",
-            iconBg: "bg-yellow-100"
+            name: "Erick Thohir",
+            position: "Menteri BUMN",
+            change: "+Rp 4.8 M",
+            changeType: "increase",
+            date: "12 hari lalu",
+            institution: "Kementerian"
         }
     ];
 
-    const team = [
-        { name: "Brian Lovin", status: "Update status", online: true, img: "https://i.pravatar.cc/150?u=brian" },
-        { name: "Dan Philibin", status: "Focus", online: true, img: "https://i.pravatar.cc/150?u=dan" },
-        { name: "Alexandru Turcanu", online: true, img: "https://i.pravatar.cc/150?u=alex" },
-        { name: "Nick Holden", online: true, img: "https://i.pravatar.cc/150?u=nick" },
-        { name: "Ryan Nystrom", online: true, img: "https://i.pravatar.cc/150?u=ryan" },
-        { name: "Paul Boudet", online: false, img: "https://i.pravatar.cc/150?u=paul" }
+    const watchlist = [
+        { name: "Anies Baswedan", position: "Menteri Pendidikan", alerts: true },
+        { name: "Prabowo Subianto", position: "Presiden RI", alerts: true },
+        { name: "Ganjar Pranowo", position: "Gubernur Jawa Tengah", alerts: false },
+        { name: "Ridwan Kamil", position: "Gubernur Jawa Barat", alerts: true }
     ];
 </script>
 
